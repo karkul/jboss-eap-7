@@ -10,8 +10,12 @@ USER root
 WORKDIR /opt/jboss
 
 ### Install EAP 7.2.0
-ADD ../../jboss-eap-7.2.0.zip /opt/jboss
+ADD jboss-eap-7.2.0.zip /opt/jboss
 RUN unzip /opt/jboss/jboss-eap-7.2.0.zip
+
+### You can download the JBoss zip file from
+# https://developers.redhat.com/products/eap/download 
+# put in the same directory where is your Dockerfile
 
 ### Set environment
 ENV JBOSS_HOME  /opt/jboss/jboss-eap-7.2
